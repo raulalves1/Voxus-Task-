@@ -5,24 +5,22 @@ Instruçôes para rodar :
 Vai baixar a pasta primeiroProjetoVoxus.rar (pode ser que essa pasta vá zipada duas vezes)
 Após isso, vá até o eclipse  
 Em file > import 
-Dentro de import, abra a pasta General (geralmente a primeira)  depois escolha a opção Existing Projects into Workspace. Após clicar aperte em Next. 
-Na pagina que vai abrir deixe em select root directory : vá em browser e selecione a pasta do projeto  (descompactada)
-Ele vai localizar o projeto e dentro da aba projects vai aparecer > primeirProjetoVoxus e o local a onde o arquivo está. Após isso aperte em finish.
+Dentro de import, abra a pasta General (geralmente a primeira), depois escolha a opção Existing Projects into Workspace. Após clicar aperte em Next. 
+Na página que vai abrir deixe em select root directory : vá em browser e selecione a pasta do projeto  (descompactada)
+Ele vai localizar o projeto e dentro da aba projects vai aparecer > primeiroProjetoVoxus e o local a onde o arquivo está. Após isso aperte em finish.
 
-Na aba Project explore do lado esquerdo ira aparecer o projeto. 
+Na aba “Project Explorer” do lado esquerdo irá aparecer o projeto. 
 Ele pode estar dando erro caso o jre não seja o 1.8.0_144
-Na pasta do projeto, vamos clicar com o botão direito e ir em propriedades, e do lado esquerdo selecionar Java Build Path. na janela que abrir vamos ate libraries. Veremos que o jre esta com um X vamos clicar em cima dela e apertar o botão a direta edit. Na janela que abrir, você vai selecionar o Workspace Default JRE (numero do seu JRE) após isso vamos clicar em Finish. 
+Na pasta do projeto, vamos clicar com o botão direito e ir em propriedades, e do lado esquerdo selecionar Java Build Path. Na janela que abrir vamos até Libraries. Veremos que o jre esta com um X, então vamos clicar em cima dele e apertar o botão a direta Edit. Na janela que abrir, você vai selecionar o Workspace Default JRE (número do seu JRE) e após isso vamos clicar em Finish e aperte o botão “Ok”.
 
-Após isso vamos instalar o servidor Tomcat 8.0.47 . Baixe o arquivo zip do tomcat que esta no github 
-Vamos no botão File > New > Other..(geralmente o ultimo da lista). Após isso vai abrir uma janela no campo de busca vamos digitar Server. Clique na opção server. Vai aparecer outra janela no campo de busca digite tomcat e encontre a versão Tomcat v8.0 Server. Selecione essa opção e aperte em Next. Na janela que vai abrir, vamos em browser e iremos selecionar a pasta  a onde esta o tomcat. Após isso vamos clicar em next e vai aparecer uma tela dos projetos que podem ser configurados, um deles vai ser o primeiroPorjetoVoxus. Selecione ele e clique em add. Após isso pode clicar em finish. 
+Após isso vamos instalar o servidor Tomcat 8.0.47 . Baixe o arquivo zip do tomcat que está no github 
+Vamos no botão File > New > Other..(geralmente o último da lista). Após isso vai abrir uma janela no campo de busca, então vamos digitar Server. Clique na opção server. Vai aparecer outra janela no campo de busca, digite tomcat e encontre a versão Tomcat v8.0 Server. Selecione essa opção e aperte em Next. Na janela que vai abrir, vamos em browser e iremos selecionar a pasta a onde está o tomcat. Após isso vamos clicar em next e vai aparecer uma tela dos projetos que podem ser configurados, um deles vai ser o primeiroProjetoVoxus. Selecione ele e clique em add. Após isso pode clicar em finish. 
 
-Agora na pasta Project Explore selecione o projeto  primeiroPorjetoVoxus clique com o botão direito e vai em Run As > run on server. Após isso verifique se aparece o nome Tomcat v8.0 server at localhost. Após isso aperte em finish. A pagina principal vai estar aparecendo com dois menus de navegação dentro de Task tem o menu Listagem task andamento e listagem das task encerradas 
+Agora na pasta “Project Explorer” selecione o projeto primeiroProjetoVoxus. Clique com o botão direito e vai em Run As > run on server. Após isso verifique se aparece o nome Tomcat v8.0 server at localhost. Após isso aperte em finish. A pagina principal vai estar aparecendo com dois menus de navegação. Dentro de Task tem o menu Listagem tasks andamento e listagem das tasks encerradas 
 
-Obrigado pela atenção qualquer duvida me chamem no email Raulalves1@gmail.com
+Obrigado pela atenção qualquer duvida me chamem no e-mail Raulalves1@gmail.com
 
-Agora para conseguirmos colocar o banco de dados iremos ter que criar as tabelas dentro do banco e configurar o  Banco de dados  e estou usando o workBench do mySql.
-
-Os comandos para criar as tabelas foram : 
+Agora para conseguirmos colocar o banco de dados iremos ter que criar as tabelas dentro do banco e configurá-lo. Estou usando o workBench do MySQL.
 
 CREATE SCHEMA IF NOT EXISTS ` bd_task ` DEFAULT CHARACTER SET utf8 ;
 USE ` bd_task ` ;
@@ -43,6 +41,15 @@ ENGINE = InnoDB;
 -- Table ` bd_task `.`task`
 -- -----------------------------------------------------
 
+
+
+
+
+
+
+
+
+
 CREATE TABLE IF NOT EXISTS ` bd_task `.`task` (
   `codigoTask` INT NOT NULL AUTO_INCREMENT,
   `nomeTask` VARCHAR(45) NOT NULL,
@@ -62,7 +69,6 @@ CREATE TABLE IF NOT EXISTS ` bd_task `.`task` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
 
 
 
